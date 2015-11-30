@@ -1,0 +1,143 @@
+/**
+*  Skz-Boilerplate
+*  @author SkyzohKey
+*  @license MIT
+*/
+
+// This file is used for theming only
+@import 'theme-values.scss';
+
+* {
+  font-family: $font-default, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight-title;
+}
+
+/**
+*  Menu (nav#menu)
+**/
+#menu {
+  background-color: $bgcolor-main;
+  color: $textcolor-main;
+
+  .logo {
+    font-weight: $font-weight-title;
+  }
+
+  ul {
+    li {
+      a {
+        color: $textcolor-main;
+        font: $font-menu-size $font-menu, sans-serif;
+        text-decoration: $extra-menu-links-decoration;
+
+        &:hover {
+          background-color: $bgcolor-main-hover;
+          border-bottom: $border-menu-links-hover-bottom;
+        }
+      }
+
+      &.button {
+        height: $size-button-menu-height;
+
+        padding: 7px 0;
+        line-height: calc($size-button-menu-height + 4px);
+
+        a {
+          height: calc($size-button-menu-height - 10px);;
+          padding: 7px 10px;
+
+          border-radius: $border-menu-button-radius;
+          border: $border-menu-button;
+          color: $textcolor-main;
+
+          &:hover {
+            background-color: $bgcolor-secondary;
+            border-color: $bgcolor-secondary;
+            color: $textcolor-main;
+          }
+        }
+      }
+
+      &.inverted {
+        a {
+          border-radius: $border-menu-button-radius;
+          background-color: $bgcolor-secondary;
+          border: $border-menu-button-inverted;
+          color: $textcolor-main;
+
+          &:hover {
+            background-color: $bgcolor-main-hover;
+            border-color: $bgcolor-main-hover;
+            color: $textcolor-main;
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+*  Header (header#intro)
+**/
+#intro {
+  background-color: $bgcolor-secondary;
+  text-align: center;
+
+  h1 {
+    color: $textcolor-main;
+    font-weight: $font-weight-title;
+  }
+  p.tagline {
+    color: $textcolor-main;
+  }
+}
+
+/**
+*  Footer social (footer#social)
+**/
+#social {
+  background-color: $bgcolor-footer-main;
+  color: $textcolor-main;
+  text-align: center;
+}
+
+/**
+*  Footer (footer#footer)
+**/
+#social {
+  text-transform: uppercase;
+  font-size: $font-footer-size;
+  font-style: normal;
+}
+
+#footer {
+  background-color: $bgcolor-footer-secondary;
+  color: $bgcolor-secondary-hover;
+  font-size: $font-footer-size;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#footer > ul {
+  list-style-type: none;
+}
+
+#footer > span.copy > a {
+  color: $bgcolor-secondary-hover;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#social > ul > li > a,
+#footer > ul > li > a {
+  color: $bgcolor-main;
+  text-decoration: none;
+  font-style: normal;
+}
+
+#social > ul > li::after,
+#footer > ul > li::after {
+  color: $bgcolor-main-hover;
+}

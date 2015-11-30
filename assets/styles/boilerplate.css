@@ -1,0 +1,169 @@
+/**
+*  Skz-Boilerplate
+*  @author SkyzohKey
+*  @license MIT
+*/
+
+/* This file define the webpage structure, not the style */
+
+/* Reset browser defaults */
+html, body {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Hack for sticky footer */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin: 0 0 150px;
+}
+
+/* Define the elements */
+#wrapper {
+  width: 100%;
+}
+
+/* Menu */
+#menu {
+  width: calc(100% - 20px); /* Clear the padding */
+  height: 40px;
+
+  padding: 0 10px;
+  display: block;
+}
+
+#menu.fixed {
+  margin-bottom: 40px;
+
+  position: fixed;
+  top: 0;
+}
+
+#menu.fixed + #intro { /* To avoid extra margin when menu isn't fixed */
+  margin-top: 40px;
+}
+
+#menu > .logo {
+  height: 40px;
+
+  float: left;
+  margin-right: 10px;
+  line-height: 39px;
+}
+
+#menu > ul {
+  margin: 0;
+  padding: 0;
+  display: inline;
+
+  list-style-type: none;
+  font-size: 0; /* Hack to remove useless whitespace between li's */
+}
+
+#menu > ul.left {
+  float: left;
+}
+
+#menu > ul.right {
+  float: right;
+}
+
+#menu > ul > li {
+  display: inline-block;
+}
+
+#menu > ul.right > li {
+  margin: 0 0 0 5px;
+}
+
+#menu > ul > li > a {
+  height: 10px; /* + 30px padding */
+
+  padding: 15px 10px;
+  display: inline-block;
+}
+
+/* Header */
+#intro {
+  width: 100%;
+  min-height: 60px;
+
+  /*margin: 40px 0 0 0;*/
+  padding: 20px 0;
+  display: block;
+}
+
+#intro > h1 {
+  margin: 0;
+}
+
+#intro > p.tagline {
+  margin: 0;
+}
+
+/* Content */
+h2 {
+  text-align: center;
+}
+
+
+/* Footers */
+#social {
+  width: calc(100% - 40px);
+  height: 20px;
+  padding: 20px;
+
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 90px;
+}
+
+#footer {
+  width: calc(100% - 60px);
+  height: 30px;
+  padding: 30px;
+
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+#social > ul,
+#footer > ul {
+  margin: 0;
+  padding: 0;
+  display: inline;
+
+  font-size: 0; /* Hack to remove useless whitespace between li's */
+}
+
+#social > ul > li,
+#footer > ul > li {
+  margin: 5px 0;
+  padding: 0 5px;
+  display: inline-block;
+
+  font-size: 14px;
+}
+
+#social > ul > li::after,
+#footer > ul > li::after {
+  content: '—';
+  margin-left: 10px;
+}
+
+#social > ul > li:last-child::after,
+#footer > ul > li:last-child::after {
+  content: '';
+  margin-left: 0;
+}
+
+#footer > span {
+  display: block;
+}

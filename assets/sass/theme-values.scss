@@ -1,0 +1,49 @@
+/**
+*  Skz-Boilerplate
+*  @author SkyzohKey
+*  @license MIT
+*/
+
+// This is a theme file. Use it to make your own theme in 30 seconds!
+
+/**
+*  Fonts settings
+**/
+$font-default: Ubuntu; // sans-serif is auto included
+$font-weight-title: lighter;
+$font-menu-size: 12px;
+$font-menu: $font-default;
+$font-footer-size: 12px;
+
+/**
+*  Background colors settings
+**/
+$bgcolor-main: #34495e;
+$bgcolor-main-hover: #2c3e50;
+$bgcolor-secondary: #16a085;
+$bgcolor-secondary-hover: #1abc9c;
+$bgcolor-footer-main: #ecf0f1;
+$bgcolor-footer-secondary: darken($bgcolor-footer-main, 5);
+
+/**
+*  Text colors settings
+**/
+$textcolor-main: #ecf0f1;
+
+/**
+*  Sizes
+**/
+$size-button-menu-height: 20px;
+
+/**
+*  Borders
+**/
+$border-menu-links-hover-bottom: 3px solid $bgcolor-secondary-hover;
+$border-menu-button: 1px solid $bgcolor-main-hover;
+$border-menu-button-radius: 3px;
+$border-menu-button-inverted: 1px solid $bgcolor-secondary;
+
+/**
+*  Extra settings
+**/
+$extra-menu-links-decoration: none;
