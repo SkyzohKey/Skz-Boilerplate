@@ -4,7 +4,18 @@ Feel free to fork it, it uses SASS for theming so it won't be hard to customize 
 
 >**Note** that this is a WIP project so please bear in mind that it's not finished and many css is missing.
 
-## Screenshot
->**Note** that the current screenshot could be outdated but this should give you a general idea of what Skz-Boilerplate is :)
+## Screenshots
+>**Note** that the current screenshots could be outdated but this should give you a general idea of what Skz-Boilerplate is :)
 
-![Current state of the Boilerplate](http://i.imgur.com/jaU733V.png)
+### Desktop view
+![Current state of the Boilerplate (desktop)](http://i.imgur.com/hRmHmSy.png)
+
+### Mobile view (portrait)
+> There is a little issue with text alignements. I'll fix this ASAP.
+
+![Current state of the Boilerplate (mobile portrait)](http://i.imgur.com/o7XrTUQ.png)
+
+### Mobile view (landscape)
+> There is a little issue with text alignements. I'll fix this ASAP.
+
+![Current state of the Boilerplate (mobile landscape)](http://i.imgur.com/n6bnVjO.png)

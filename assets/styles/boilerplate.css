@@ -7,10 +7,15 @@
 /* This file define the webpage structure, not the style */
 
 /* Reset browser defaults */
+* { box-sizing: border-box; }
 html, body {
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0;
+}
+img {
+  width: 100%;
+  max-width: 100%;
 }
 
 /* Hack for sticky footer */
@@ -29,7 +34,7 @@ body {
 
 /* Menu */
 #menu {
-  width: calc(100% - 20px); /* Clear the padding */
+  width: 100%; /* Clear the padding */
   height: 40px;
 
   padding: 0 10px;
@@ -38,6 +43,7 @@ body {
 
 #menu.fixed {
   margin-bottom: 40px;
+  z-index: 99999;
 
   position: fixed;
   top: 0;
@@ -45,6 +51,10 @@ body {
 
 #menu.fixed + #intro { /* To avoid extra margin when menu isn't fixed */
   margin-top: 40px;
+}
+
+#menu.fixed + .mobile-menu {
+  position: fixed;
 }
 
 #menu > .logo {
@@ -55,7 +65,8 @@ body {
   line-height: 39px;
 }
 
-#menu > ul {
+#menu > ul,
+#menu > div.mobile-menu > ul {
   margin: 0;
   padding: 0;
   display: inline;
@@ -64,7 +75,7 @@ body {
   font-size: 0; /* Hack to remove useless whitespace between li's */
 }
 
-#menu > ul.left {
+#menu > div.mobile-menu > ul.left {
   float: left;
 }
 
@@ -72,17 +83,18 @@ body {
   float: right;
 }
 
-#menu > ul > li {
+#menu > ul > li,
+#menu > div.mobile-menu > ul > li {
   display: inline-block;
 }
 
-#menu > ul.right > li {
+#menu > ul.right > li,
+#menu > div.mobile-menu > ul.right > li {
   margin: 0 0 0 5px;
 }
 
-#menu > ul > li > a {
-  height: 10px; /* + 30px padding */
-
+#menu > ul > li > a,
+#menu > div.mobile-menu > ul > li > a {
   padding: 15px 10px;
   display: inline-block;
 }
@@ -93,7 +105,7 @@ body {
   min-height: 60px;
 
   /*margin: 40px 0 0 0;*/
-  padding: 20px 0;
+  padding: 20px 10px;
   display: block;
 }
 
@@ -110,11 +122,14 @@ h2 {
   text-align: center;
 }
 
+#content {
+  padding: 10px;
+}
 
 /* Footers */
 #social {
-  width: calc(100% - 40px);
-  height: 20px;
+  width: 100%;
+  height: 60px;
   padding: 20px;
 
   display: block;
@@ -124,8 +139,8 @@ h2 {
 }
 
 #footer {
-  width: calc(100% - 60px);
-  height: 30px;
+  width: 100%;
+  height: 90px;
   padding: 30px;
 
   display: block;
@@ -149,7 +164,7 @@ h2 {
   padding: 0 5px;
   display: inline-block;
 
-  font-size: 14px;
+  font-size: 11px;
 }
 
 #social > ul > li::after,
@@ -167,3 +182,78 @@ h2 {
 #footer > span {
   display: block;
 }
+
+.toggle, .toggler, .overlay {
+  display: none;
+}
+aside {
+  display: inline;
+}
+
+
+/**
+*  Responsive design
+**/
+
+/* Smartphones portait (not "smart" enough to auto-adapt the layout >.<) */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 620px) {
+  #menu > div.mobile-menu {
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    top: 40px;
+    left: 0;
+
+    background-color: #2c3e50;
+    text-align: center;
+  }
+
+  #menu > div.mobile-menu > ul {
+    margin: 0 auto;
+    display: block;
+
+    text-align: center;
+  }
+
+  #menu > div.mobile-menu > ul > li > a {
+    height: 30px;
+    display: block;
+    padding: 10px 7px !important;
+
+    background-color: #2c3e50;
+  }
+
+  #menu > div.mobile-menu > ul > li > a:hover,
+  #menu > div.mobile-menu > ul > li.active > a {
+    height: 30px !important;
+    border: none !important;
+
+    background-color: #34495e !important;
+    border-bottom: 3px solid #1abc9c;
+  }
+
+  #intro {
+    margin-top: 70px !important;
+  }
+}
+
+/* Smartphones landscape */
+/*@media only screen
+and (min-device-width : 480px)
+and (max-device-width : 767px) {
+  body { background-color: lime; }
+}*/
+
+/* Tablets (aka. bricks) */
+/*@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+  body { background-color: red; }
+}*/
+
+/* Less than 481px (first gen phones) */
+/*@media screen and (max-width: 481px) {
+  * { display: none; }
+}*/

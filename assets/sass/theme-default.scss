@@ -33,28 +33,26 @@ h1, h2, h3, h4, h5, h6 {
         text-decoration: $extra-menu-links-decoration;
 
         &:hover {
+          height: 43px;
           background-color: $bgcolor-main-hover;
           border-bottom: $border-menu-links-hover-bottom;
         }
       }
 
       &.button {
-        height: $size-button-menu-height;
-
-        padding: 7px 0;
-        line-height: calc($size-button-menu-height + 4px);
+        padding: 10px 0;
 
         a {
-          height: calc($size-button-menu-height - 10px);;
-          padding: 7px 10px;
+          height: $size-button-menu-height;
+          padding: 5px 10px;
 
           border-radius: $border-menu-button-radius;
           border: $border-menu-button;
           color: $textcolor-main;
 
           &:hover {
-            background-color: $bgcolor-secondary;
-            border-color: $bgcolor-secondary;
+            background-color: $bgcolor-main-hover;
+            border-color: $bgcolor-main-hover;
             color: $textcolor-main;
           }
         }
